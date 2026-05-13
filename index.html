@@ -1023,7 +1023,7 @@
     </div>
     <div class="about-visual reveal">
       <div class="about-card">
-        <div class="about-floating-tag">Est. 2024</div>
+
         <div class="about-card-icon">🎬</div>
         <h3>Creative-first approach</h3>
         <p>Every edit is crafted to reflect your unique style and voice — not a template, not a formula. Real creative direction for real creators.</p>
@@ -1130,7 +1130,7 @@
           <li>2-day delivery</li>
           <li>1 revision round</li>
         </ul>
-        <a href="https://wa.me/918438296063" target="_blank" class="btn-plan outline">Get Started</a>
+        <button onclick="openContact('Starter - ₹399')" class="btn-plan outline">Get Started</button>
       </div>
       <div class="pricing-card featured">
         <div class="pricing-badge">Most Popular</div>
@@ -1144,7 +1144,7 @@
           <li>Thumbnail included</li>
           <li>3 revision rounds</li>
         </ul>
-        <a href="https://wa.me/918438296063" target="_blank" class="btn-plan filled">Get Started</a>
+        <button onclick="openContact('Creator - ₹1,899')" class="btn-plan filled">Get Started</button>
       </div>
       <div class="pricing-card">
         <div class="pricing-plan">Brand</div>
@@ -1157,7 +1157,7 @@
           <li>Full brand kit</li>
           <li>Unlimited revisions</li>
         </ul>
-        <a href="https://wa.me/918438296063" target="_blank" class="btn-plan outline">Contact Us</a>
+        <button onclick="openContact('Brand - Custom Plan')" class="btn-plan outline">Contact Us</button>
       </div>
     </div>
   </section>
@@ -1304,11 +1304,11 @@
               <div class="contact-method-value">@hariiish_764</div>
             </div>
           </a>
-          <a href="mailto:220cuts@gmail.com" class="contact-method">
+          <a href="mailto:ynggowshik@gmail.com?subject=Project Inquiry&body=Hi! I'd like to work with 220 Cuts." class="contact-method">
             <span class="contact-method-icon">✉️</span>
             <div>
               <div class="contact-method-label">Email</div>
-              <div class="contact-method-value">220cuts@gmail.com</div>
+              <div class="contact-method-value">ynggowshik@gmail.com</div>
             </div>
           </a>
         </div>
@@ -1358,7 +1358,7 @@
   <!-- FOOTER -->
   <footer>
     <a href="#" class="footer-logo">220<span>CUTS</span></a>
-    <p class="footer-copy">© 2024 220Cuts. All rights reserved.</p>
+    <p class="footer-copy">© 2025 220Cuts. All rights reserved.</p>
     <div class="footer-links">
       <a href="https://instagram.com/hariiish_764" target="_blank">Instagram</a>
       <a href="https://wa.me/918438296063" target="_blank">WhatsApp</a>
@@ -1367,6 +1367,39 @@
   </footer>
 
   <!-- WhatsApp Float -->
+  <!-- CONTACT CHOICE MODAL -->
+  <div id="contactModal" style="display:none; position:fixed; inset:0; background:rgba(0,0,0,0.88); z-index:600; align-items:center; justify-content:center; padding:1rem;">
+    <div style="background:#111; border:1px solid rgba(255,255,255,0.1); border-radius:10px; padding:2.5rem; width:100%; max-width:420px; position:relative;">
+      <button onclick="closeContact()" style="position:absolute; top:1rem; right:1.2rem; background:none; border:none; color:#888; font-size:1.5rem; cursor:pointer;">✕</button>
+      <div style="font-family:'Bebas Neue',sans-serif; font-size:1.8rem; letter-spacing:2px; color:#fff; margin-bottom:0.3rem;">GET IN TOUCH</div>
+      <div id="contactPlanLabel" style="font-size:0.78rem; letter-spacing:2px; text-transform:uppercase; color:var(--accent); margin-bottom:1.5rem;"></div>
+      <p style="font-size:0.88rem; color:#888; margin-bottom:1.5rem; line-height:1.6;">Choose how you'd like to reach us — we reply within a few hours!</p>
+      <div style="display:flex; flex-direction:column; gap:1rem;">
+        <a id="waLink" href="#" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:#0a0a0a;border:1px solid rgba(255,255,255,0.07);border-radius:6px;text-decoration:none;color:#fff;transition:all 0.3s;" onmouseover="this.style.borderColor='#25D366';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.transform='none'">
+          <span style="font-size:1.5rem;">💬</span>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">WhatsApp</div>
+            <div style="font-size:0.75rem;color:#888;">+91 84382 96063 · Fastest reply</div>
+          </div>
+        </a>
+        <a href="https://instagram.com/hariiish_764" target="_blank" style="display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:#0a0a0a;border:1px solid rgba(255,255,255,0.07);border-radius:6px;text-decoration:none;color:#fff;transition:all 0.3s;" onmouseover="this.style.borderColor='#E1306C';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.transform='none'">
+          <span style="font-size:1.5rem;">📸</span>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Instagram DM</div>
+            <div style="font-size:0.75rem;color:#888;">@hariiish_764 · DM us directly</div>
+          </div>
+        </a>
+        <a id="emailLink" href="#" style="display:flex;align-items:center;gap:1rem;padding:1rem 1.2rem;background:#0a0a0a;border:1px solid rgba(255,255,255,0.07);border-radius:6px;text-decoration:none;color:#fff;transition:all 0.3s;" onmouseover="this.style.borderColor='#FF3D00';this.style.transform='translateX(4px)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.07)';this.style.transform='none'">
+          <span style="font-size:1.5rem;">✉️</span>
+          <div>
+            <div style="font-family:'Syne',sans-serif;font-weight:700;font-size:0.95rem;">Email</div>
+            <div style="font-size:0.75rem;color:#888;">ynggowshik@gmail.com</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
   <a href="https://wa.me/918438296063" target="_blank" class="whatsapp-btn" title="Chat on WhatsApp">💬</a>
 
   <script>
@@ -1509,6 +1542,21 @@
         ).join('');
       });
       card.addEventListener('mouseleave', () => { title.textContent = original; });
+    });
+
+    // Contact choice modal
+    function openContact(plan) {
+      const msg = encodeURIComponent("Hi! I'm interested in the " + plan + " package. Can we discuss?");
+      document.getElementById('contactPlanLabel').textContent = '📦 ' + plan;
+      document.getElementById('waLink').href = 'https://wa.me/918438296063?text=' + msg;
+      document.getElementById('emailLink').href = 'mailto:ynggowshik@gmail.com?subject=Inquiry - ' + plan + '&body=Hi! I am interested in the ' + plan + ' package. Can we discuss?';
+      document.getElementById('contactModal').style.display = 'flex';
+    }
+    function closeContact() {
+      document.getElementById('contactModal').style.display = 'none';
+    }
+    document.getElementById('contactModal').addEventListener('click', function(e) {
+      if (e.target === this) closeContact();
     });
 
     // Star picker
